@@ -1,0 +1,40 @@
+{
+  "name": "fly-ava",
+  "version": "0.1.0",
+  "description": "A plugin for Fly that run ava tests",
+  "keywords": [
+    "fly",
+    "fly-plugin"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "*.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "fly test"
+  },
+  "dependencies": {
+    "ava": "^0.6.1"
+  },
+  "devDependencies": {
+    "fly": "^0.8.4",
+    "fly-eslint": "^1.0.0",
+    "fly-ava": "./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pine613/fly-ava"
+  },
+  "bugs": {
+    "url": "https://github.com/pine613/fly-ava/issues"
+  },
+  "homepage": "https://github.com/pine613/fly-ava",
+  "author": {
+    "name": "Pine Mizune",
+    "email": "pinemz@gmail.com",
+    "url": "https://github.com/pine613"
+  },
+  "license": "MIT"
+}
