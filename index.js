@@ -1,5 +1,7 @@
 const execFile = require('child_process').execFile
-const ava = require.resolve('ava/cli.js')
+
+const isWin = /^win/.test(process.platform)
+const ava = require.resolve(isWin ? '.bin/ava.cmd' : 'ava/cli.js')
 
 module.exports = function () {
   this.ava = function (opts) {
