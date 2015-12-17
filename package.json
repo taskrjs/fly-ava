@@ -16,7 +16,7 @@
     "test": "fly test"
   },
   "dependencies": {
-    "ava": "^0.7.0"
+    "ava": "^0.8.0"
   },
   "devDependencies": {
     "fly": "^0.8.4",
