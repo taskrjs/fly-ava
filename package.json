@@ -1,6 +1,6 @@
 {
   "name": "fly-ava",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A plugin for Fly that run ava tests",
   "keywords": [
     "fly",
@@ -16,8 +16,8 @@
     "test": "fly test"
   },
   "dependencies": {
-    "ava": "^0.8.0",
-    "co": "^4.6.0"
+    "co": "^4.6.0",
+    "ava": "^0.9.1"
   },
   "devDependencies": {
     "fly": "^0.8.4",
