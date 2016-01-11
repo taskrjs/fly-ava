@@ -1,19 +1,22 @@
-const execFile = require('child_process').execFile
-const ava = require.resolve('ava/cli.js')
+const Api = require('ava/api')
+const Verbose = require('ava/lib/reporters/verbose')
+const co = require('co')
 
 module.exports = function () {
   this.ava = function (opts) {
     return this.unwrap(files => {
-      return new Promise((resolve, reject) => {
-        const args = files.concat('--color')
-        args.unshift(ava)
+      return co(function *() {
+        const api = new Api(files)
+        const reporter = new Verbose()
+        reporter.api = api
 
-        execFile(process.execPath, args, (err, stdout, stderr) => {
-          if (err) { return reject(stderr) }
+        api.on('test', test => console.error(reporter.test(test)))
+        api.on('error', error => console.error(reporter.unhandledError(test)))
 
-          console.log(stderr)
-          resolve()
-        })
+        yield api.run()
+
+        console.error(reporter.finish())
+        if (api.failCount > 0) throw api.errors
       })
     })
   }
