@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "co": "^4.6.0",
-    "ava": "^0.9.1"
+    "ava": "^0.10.0"
   },
   "devDependencies": {
     "fly": "^0.8.4",
