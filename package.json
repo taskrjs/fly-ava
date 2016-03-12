@@ -20,7 +20,7 @@
     "ava": "^0.13.0"
   },
   "devDependencies": {
-    "fly": "^0.8.4",
+    "fly": "0.8.4",
     "fly-eslint": "^1.0.0",
     "fly-ava": "./"
   },
