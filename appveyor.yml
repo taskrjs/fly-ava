@@ -5,7 +5,7 @@ install:
 
   - npm install -g node-gyp
   - npm install -g npm-install-retry
-  - npm-install-retry -- --build-from-source --msvs_version=2013
+  - npm-install-retry --wait 1000 --attempts 10 -- --build-from-source --msvs_version=2013 --force
 
 test_script:
   - npm test
