@@ -26,16 +26,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pine613/fly-ava"
+    "url": "https://github.com/pine/fly-ava"
   },
   "bugs": {
-    "url": "https://github.com/pine613/fly-ava/issues"
+    "url": "https://github.com/pine/fly-ava/issues"
   },
-  "homepage": "https://github.com/pine613/fly-ava",
+  "homepage": "https://github.com/pine/fly-ava",
   "author": {
     "name": "Pine Mizune",
     "email": "pinemz@gmail.com",
-    "url": "https://github.com/pine613"
+    "url": "https://github.com/pine"
   },
   "license": "MIT"
 }
