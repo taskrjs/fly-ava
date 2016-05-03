@@ -42,8 +42,8 @@ MIT License
 [npm-ver-link]:    https://img.shields.io/npm/v/fly-ava.svg?style=flat-square
 [travis-link]:     https://travis-ci.org/pine/fly-ava
 [travis-badge]:    http://img.shields.io/travis/pine/fly-ava.svg?style=flat-square
-[appveyor-link]:   https://ci.appveyor.com/project/pine613/fly-ava/branch/master
-[appveyor-badge]:  https://img.shields.io/appveyor/ci/pine613/fly-ava/master.svg?style=flat-square
+[appveyor-link]:   https://ci.appveyor.com/project/pine/fly-ava/branch/master
+[appveyor-badge]:  https://img.shields.io/appveyor/ci/pine/fly-ava/master.svg?style=flat-square
 [david-link]:      https://david-dm.org/pine/fly-ava
 [david-badge]:     https://img.shields.io/david/pine/fly-ava.svg?style=flat-square
 [david-dev-link]:  https://david-dm.org/pine/fly-ava#info=devDependencies&view=table
