@@ -13,10 +13,10 @@ module.exports = function () {
         api.on('test', test => console.error(reporter.test(test)))
         api.on('error', error => console.error(reporter.unhandledError(test)))
 
-        yield api.run(files)
+        const runStatus = yield api.run(files)
 
-        console.error(reporter.finish())
-        if (api.failCount > 0) throw api.errors
+        console.error(reporter.finish(runStatus))
+        if (runStatus.failCount > 0) throw runStatus.errors
       })
     })
   }
