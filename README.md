@@ -40,8 +40,8 @@ MIT License
 [mit-badge]:       https://img.shields.io/badge/license-MIT-444444.svg?style=flat-square
 [npm-pkg-link]:    https://www.npmjs.org/package/fly-ava
 [npm-ver-link]:    https://img.shields.io/npm/v/fly-ava.svg?style=flat-square
-[travis-link]:     https://travis-ci.org/pine/fly-ava
-[travis-badge]:    http://img.shields.io/travis/pine/fly-ava.svg?style=flat-square
+[travis-link]:     https://travis-ci.org/flyjs/fly-ava
+[travis-badge]:    http://img.shields.io/travis/flyjs/fly-ava.svg?style=flat-square
 [appveyor-link]:   https://ci.appveyor.com/project/pine/fly-ava/branch/master
 [appveyor-badge]:  https://img.shields.io/appveyor/ci/pine/fly-ava/master.svg?style=flat-square
 [david-link]:      https://david-dm.org/pine/fly-ava
