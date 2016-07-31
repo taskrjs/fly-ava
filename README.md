@@ -44,9 +44,9 @@ MIT License
 [travis-badge]:    http://img.shields.io/travis/flyjs/fly-ava.svg?style=flat-square
 [appveyor-link]:   https://ci.appveyor.com/project/pine/fly-ava/branch/master
 [appveyor-badge]:  https://img.shields.io/appveyor/ci/pine/fly-ava/master.svg?style=flat-square
-[david-link]:      https://david-dm.org/pine/fly-ava
-[david-badge]:     https://img.shields.io/david/pine/fly-ava.svg?style=flat-square
-[david-dev-link]:  https://david-dm.org/pine/fly-ava#info=devDependencies&view=table
-[david-dev-badge]: https://img.shields.io/david/dev/pine/fly-ava.svg?style=flat-square
-[climate-link]:    https://codeclimate.com/github/pine/fly-ava
-[climate-badge]:   https://img.shields.io/codeclimate/github/pine/fly-ava.svg?style=flat-square
+[david-link]:      https://david-dm.org/flyjs/fly-ava
+[david-badge]:     https://img.shields.io/david/flyjs/fly-ava.svg?style=flat-square
+[david-dev-link]:  https://david-dm.org/flyjs/fly-ava#info=devDependencies&view=table
+[david-dev-badge]: https://img.shields.io/david/dev/flyjs/fly-ava.svg?style=flat-square
+[climate-link]:    https://codeclimate.com/github/flyjs/fly-ava
+[climate-badge]:   https://img.shields.io/codeclimate/github/flyjs/fly-ava.svg?style=flat-square
