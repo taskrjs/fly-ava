@@ -13,7 +13,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "fly test"
+    "test": "fly test && ava test/*.js"
   },
   "dependencies": {
     "co": "^4.6.0",
@@ -21,8 +21,7 @@
   },
   "devDependencies": {
     "fly": ">=1.1.2 <2.0.0",
-    "fly-eslint": "^1.0.0",
-    "fly-ava": "./"
+    "fly-eslint": "^1.0.0"
   },
   "repository": {
     "type": "git",
