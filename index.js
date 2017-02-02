@@ -1,6 +1,6 @@
 'use strict'
 
-const format = require('path').format
+const {format} = require('path')
 
 const Api = require('ava/api')
 const Verbose = require('ava/lib/reporters/verbose')
