@@ -16,7 +16,7 @@
     "test": "fly test && ava test/*.js"
   },
   "dependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.0",
     "co": "^4.6.0"
   },
   "devDependencies": {
