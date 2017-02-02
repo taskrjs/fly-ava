@@ -1,21 +1,34 @@
-import test from 'ava'
 import {join} from 'path'
 
-const fly = {}
-require('../').call(fly)
+import test from 'ava'
+import Fly from 'fly'
 
 test('pass', t => {
-  fly.unwrap = f => f([ join(__dirname, '/fixture/pass.js') ])
-  return fly.ava().then(
-    () => t.pass(),
-    () => t.fail()
-  )
+  const fly = new Fly({
+    plugins: [ require('../') ],
+    tasks: {
+      *foo(f) {
+        yield f.source([ join(__dirname, '/fixture/pass.js') ]).ava()
+      },
+    },
+  })
+
+  fly.start('foo')
+    .then(() => t.pass('ok'))
+    .catch(() => t.fail('should be the test that was succeeded'))
 })
 
 test('fail', t => {
-  fly.unwrap = f => f([ join(__dirname, '/fixture/fail.js') ])
-  return fly.ava().then(
-    () => t.fail(),
-    () => t.pass()
-  )
+  const fly = new Fly({
+    plugins: [ require('../') ],
+    tasks: {
+      *foo(f) {
+        yield f.source([ join(__dirname, '/fixture/fail.js') ]).ava()
+      },
+    },
+  })
+
+  fly.start('foo')
+    .then(() => t.pass('ok'))
+    .catch(() => t.failed('should be the test that was failed'))
 })

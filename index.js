@@ -1,23 +1,25 @@
+'use strict'
+
+const {format} = require('path')
+
 const Api = require('ava/api')
 const Verbose = require('ava/lib/reporters/verbose')
 const co = require('co')
 
-module.exports = function () {
-  this.ava = function (opts) {
-    return this.unwrap(files => {
-      return co(function *() {
-        const api = new Api()
-        const reporter = new Verbose()
-        reporter.api = api
+module.exports = {
+  name: 'ava',
+  every: false,
+  files: true,
+  *func(files, opts) {
+    const api = new Api()
+    const reporter = new Verbose({ basePath: '.' })
 
-        api.on('test', test => console.error(reporter.test(test)))
-        api.on('error', error => console.error(reporter.unhandledError(test)))
+    api.on('test', test => console.error(reporter.test(test)))
+    api.on('error', error => console.error(reporter.unhandledError(test)))
 
-        const runStatus = yield api.run(files)
+    const runStatus = yield api.run(files.map(format))
 
-        console.error(reporter.finish(runStatus))
-        if (runStatus.failCount > 0) throw runStatus.errors
-      })
-    })
-  }
+    console.log(reporter.finish(runStatus))
+    if (runStatus.failCount > 0) throw runStatus.errors
+  },
 }
