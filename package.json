@@ -16,8 +16,7 @@
     "test": "eslint *.js test/*.js && ava -v test/*.js"
   },
   "dependencies": {
-    "ava": "^0.18.0",
-    "co": "^4.6.0"
+    "ava": "^0.18.0"
   },
   "devDependencies": {
     "eslint": "^3.14.1",

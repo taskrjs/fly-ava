@@ -4,7 +4,6 @@ const {format} = require('path')
 
 const Api = require('ava/api')
 const Verbose = require('ava/lib/reporters/verbose')
-const co = require('co')
 
 module.exports = {
   name: 'ava',
