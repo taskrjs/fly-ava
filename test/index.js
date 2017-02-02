@@ -13,7 +13,7 @@ test('pass', t => {
     },
   })
 
-  fly.start('foo')
+  return fly.start('foo')
     .then(() => t.pass('ok'))
     .catch(() => t.fail('should be the test that was succeeded'))
 })
@@ -28,7 +28,7 @@ test('fail', t => {
     },
   })
 
-  fly.start('foo')
-    .then(() => t.pass('ok'))
-    .catch(() => t.failed('should be the test that was failed'))
+  return fly.start('foo')
+    .then(() => t.failed('should be the test that was failed'))
+    .catch(() => t.pass('ok'))
 })
