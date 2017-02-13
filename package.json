@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pine/fly-ava"
+    "url": "https://github.com/flyjs/fly-ava"
   },
   "bugs": {
-    "url": "https://github.com/pine/fly-ava/issues"
+    "url": "https://github.com/flyjs/fly-ava/issues"
   },
-  "homepage": "https://github.com/pine/fly-ava",
+  "homepage": "https://github.com/flyjs/fly-ava",
   "author": {
     "name": "Pine Mizune",
     "email": "pinemz@gmail.com",
