@@ -25,8 +25,10 @@ $ npm i fly-ava -D
 ## Usage examples
 
 ```js
-exports.default = function* () {
-  yield this.source('./test/*.js').ava()
+module.exports {
+  *default(fly) {
+    yield fly.source('./test/*.js').ava()
+  },
 }
 ```
 
