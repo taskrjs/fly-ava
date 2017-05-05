@@ -5,6 +5,7 @@ const pkgConf = require('pkg-conf')
 
 const Api = require('ava/api')
 const Verbose = require('ava/lib/reporters/verbose')
+const Logger = require('ava/lib/logger')
 const babelConfigHelper = require('ava/lib/babel-config')
 
 module.exports = {
@@ -24,9 +25,18 @@ module.exports = {
 
     const api = new Api(opts)
     const reporter = new Verbose()
+    reporter.api = api
 
-    api.on('test', test => console.error(reporter.test(test)))
-    api.on('error', error => console.error(reporter.unhandledError(test)))
+    const logger = new Logger(reporter)
+    logger.start()
+
+    api.on('test-run', runStatus => {
+      reporter.api = runStatus
+      runStatus.on('test', logger.test)
+      runStatus.on('error', logger.unhandledError)
+      runStatus.on('stdout', logger.stdout)
+      runStatus.on('stderr', logger.stderr)
+    })
 
     const runStatus = yield api.run(files.map(path.format))
 
